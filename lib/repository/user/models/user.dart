@@ -15,6 +15,13 @@ class User {
 
   static get empty => User();
 
+  double get totalPortfolio {
+    double? result = portfolios?.fold(0, (total, portfolio) {
+      return (total ?? 0) + (portfolio.portfolioValue);
+    });
+    return result?.truncateToDouble() ?? 0;
+  }
+
   User copyWith({
     int? id,
     String? fullName,

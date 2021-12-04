@@ -19,6 +19,8 @@ class HomeScreen extends StatelessWidget {
               NameHeaderSection(),
               SizedBox(height: 16),
               PortfolioOverviewSection(),
+              SizedBox(height: 24),
+              YourAssetsSection(),
             ],
           ),
         ),
