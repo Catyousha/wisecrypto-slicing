@@ -15,23 +15,10 @@ class HomeScreen extends StatelessWidget {
         body: PageContainer(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              BlocConsumer<UserCubit, UserState>(
-                listener: (context, state) async {
-                  if (state.status.isInitial) {
-                    await context.read<UserCubit>().fetchUser();
-                  }
-                },
-                builder: (context, state) => NameHeaderSection(
-                  fullName: state.user.fullName ?? '-',
-                  profilePicture: AssetImage(
-                    state.user.profileImageSrc ??
-                        ImageConstant.defaultProfilePic,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 16),
-              const PortfolioOverviewSection(),
+            children: const <Widget>[
+              NameHeaderSection(),
+              SizedBox(height: 16),
+              PortfolioOverviewSection(),
             ],
           ),
         ),
