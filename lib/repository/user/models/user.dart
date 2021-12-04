@@ -13,6 +13,8 @@ class User {
     this.portfolios,
   });
 
+  static get empty => User();
+
   User copyWith({
     int? id,
     String? fullName,

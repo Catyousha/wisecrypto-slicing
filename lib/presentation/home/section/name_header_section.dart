@@ -4,15 +4,22 @@ import '../../../config/themes/themes.dart';
 import '../../../constants/constants.dart';
 
 class NameHeaderSection extends StatelessWidget {
-  const NameHeaderSection({Key? key}) : super(key: key);
+  const NameHeaderSection({
+    Key? key,
+    required this.fullName,
+    required this.profilePicture,
+  }) : super(key: key);
+
+  final ImageProvider profilePicture;
+  final String fullName;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        const CircleAvatar(
-          backgroundImage: AssetImage(DummyUser.profilePicture),
+        CircleAvatar(
+          backgroundImage: profilePicture,
           radius: 40,
         ),
         const SizedBox(width: 12),
@@ -25,7 +32,7 @@ class NameHeaderSection extends StatelessWidget {
                     color: AppColor.gray2,
                     fontWeight: AppText.semiBold,
                   )),
-              Text(DummyUser.name,
+              Text(fullName,
                   style: AppText.textSemiLarge.copyWith(
                     color: AppColor.black,
                     fontWeight: AppText.bold,

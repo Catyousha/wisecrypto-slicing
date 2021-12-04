@@ -7,7 +7,7 @@ class CoinServices {
     try {
       final response = await Future.delayed(
         const Duration(seconds: 1),
-        () => _dummyData,
+        () => dummyCoins,
       );
       return response;
     } catch (e) {
@@ -16,7 +16,7 @@ class CoinServices {
   }
 }
 
-final List<Coin> _dummyData = [
+final List<Coin> dummyCoins = [
   Coin(
     id: 1,
     name: 'Bitcoin',
