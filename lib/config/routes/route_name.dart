@@ -1,7 +1,7 @@
+const initialRoute = root;
 
-  const initialRoute = home;
-
-  const home = '/';
-  const notification = '/notification';
-  const market = '/market';
-  const profile = '/profile';
+const root = '/';
+const home = '/home';
+const notification = '/notification';
+const market = '/market';
+const profile = '/profile';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wisecrypto_slicing/config/routes/routes.dart' as router;
+import 'package:wisecrypto_slicing/config/themes/themes.dart';
 import 'repository/user/user.dart';
 import 'logic/user/user.dart';
 
@@ -19,9 +20,16 @@ class WisecryptoApp extends StatelessWidget {
           create: (_) => UserCubit(UserRepository())..fetchUser(),
         )
       ],
-      child: const MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Wisecrypto App',
+        theme: ThemeData(
+          fontFamily: AppText.fontFamily,
+          textTheme: Theme.of(context).textTheme.apply(
+                bodyColor: AppText.defaultTextColor,
+                displayColor: AppText.defaultTextColor,
+              ),
+        ),
         onGenerateRoute: router.controller,
         initialRoute: router.initialRoute,
       ),

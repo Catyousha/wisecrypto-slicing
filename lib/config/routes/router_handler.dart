@@ -8,6 +8,8 @@ Widget dummyPage = const Scaffold(
 
 Route<dynamic> controller(RouteSettings settings) {
   switch (settings.name) {
+    case route_name.root:
+      return MaterialPageRoute(builder: (_) => const RootScreen());
     case route_name.home:
       return MaterialPageRoute(builder: (_) => const HomeScreen());
     case route_name.notification:
