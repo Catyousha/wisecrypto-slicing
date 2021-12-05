@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wisecrypto_slicing/constants/constants.dart';
-import '../../../logic/user/user.dart';
 import '../../../widgets/widgets.dart';
 import '../section/section.dart';
 
@@ -21,6 +18,8 @@ class HomeScreen extends StatelessWidget {
               PortfolioOverviewSection(),
               SizedBox(height: 24),
               YourAssetsSection(),
+              SizedBox(height: 24),
+              WatchlistSection(),
             ],
           ),
         ),

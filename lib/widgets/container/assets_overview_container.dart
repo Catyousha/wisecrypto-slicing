@@ -63,31 +63,7 @@ class AssetsOverviewContainer extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(4),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: AppColor.primary,
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Transform.rotate(
-                      angle: pi / 4,
-                      child: const Icon(
-                        IconlyLight.arrow_up,
-                        color: AppColor.white,
-                        size: 14,
-                      ),
-                    ),
-                    const SizedBox(width: 2),
-                    Text('${gain.toStringAsFixed(2)}%',
-                        style: AppText.textExtraSmall.copyWith(
-                          color: AppColor.white,
-                          fontWeight: AppText.bold,
-                        )),
-                  ],
-                ),
-              ),
+              GainPill(gain: gain)
             ],
           ),
 
