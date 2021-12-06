@@ -25,36 +25,50 @@ class AppText {
 
   /// Font size: 10
   static const textExtraSmall = TextStyle(
+    color: defaultTextColor,
+    fontFamily: fontFamily,
     fontSize: 10,
   );
 
   /// Font size: 12
   static const textSmall = TextStyle(
+    color: defaultTextColor,
+    fontFamily: fontFamily,
     fontSize: 12,
   );
 
   /// Font size: 14
   static const textNormal = TextStyle(
+    color: defaultTextColor,
+    fontFamily: fontFamily,
     fontSize: 14,
   );
 
   /// Font size: 16
   static const textMedium = TextStyle(
+    color: defaultTextColor,
+    fontFamily: fontFamily,
     fontSize: 16,
   );
 
   /// Font size: 20
   static const textSemiLarge = TextStyle(
+    color: defaultTextColor,
+    fontFamily: fontFamily,
     fontSize: 20,
   );
 
   /// Font size: 24
   static const textLarge = TextStyle(
+    color: defaultTextColor,
+    fontFamily: fontFamily,
     fontSize: 24,
   );
 
   /// Font size: 32
   static const textExtraLarge = TextStyle(
+    color: defaultTextColor,
+    fontFamily: fontFamily,
     fontSize: 32,
   );
 }

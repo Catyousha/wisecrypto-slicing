@@ -17,7 +17,7 @@ Route<dynamic> controller(RouteSettings settings) {
     case route_name.profile:
       return MaterialPageRoute(builder: (_) => dummyPage);
     case route_name.market:
-      return MaterialPageRoute(builder: (_) => dummyPage);
+      return MaterialPageRoute(builder: (_) => const MarketScreen());
     default:
       return MaterialPageRoute(builder: (_) => dummyPage);
   }

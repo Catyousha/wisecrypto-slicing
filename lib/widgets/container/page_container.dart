@@ -9,20 +9,23 @@ class PageContainer extends StatelessWidget {
   final Widget child;
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: Container(
-            color: AppColor.light,
-            padding: const EdgeInsets.symmetric(
-              vertical: 32,
-              horizontal: 15,
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: CustomScrollView(
+        slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Container(
+              color: AppColor.light,
+              padding: const EdgeInsets.symmetric(
+                vertical: 32,
+                horizontal: 15,
+              ),
+              child: child,
             ),
-            child: child,
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
