@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import '../../config/themes/themes.dart';
-import '../partial/partial.dart';
+import '../widgets.dart';
 
 class AssetsOverviewContainer extends StatelessWidget {
   const AssetsOverviewContainer({

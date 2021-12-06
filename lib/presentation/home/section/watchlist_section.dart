@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../config/themes/themes.dart';
-import '../../../logic/user/user.dart';
+import '../../../logic/logic.dart';
 import '../../../widgets/tile/tile.dart';
 
 class WatchlistSection extends StatelessWidget {

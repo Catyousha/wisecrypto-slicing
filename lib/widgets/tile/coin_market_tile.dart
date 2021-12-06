@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../utils/app_utils.dart';
-import '../partial/partial.dart';
 import '../../config/themes/themes.dart';
+import '../widgets.dart';
 
 class CoinMarketTile extends StatelessWidget {
   const CoinMarketTile({

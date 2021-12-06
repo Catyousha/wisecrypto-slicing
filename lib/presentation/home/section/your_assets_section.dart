@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wisecrypto_slicing/logic/user/user.dart';
+import '../../../logic/logic.dart';
 import '../../../config/themes/themes.dart';
 import '../../../widgets/widgets.dart';
 

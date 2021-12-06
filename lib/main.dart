@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wisecrypto_slicing/config/routes/routes.dart' as router;
 import 'package:wisecrypto_slicing/config/themes/themes.dart';
 import 'repository/user/user.dart';
-import 'logic/user/user.dart';
+import 'logic/logic.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);

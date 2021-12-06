@@ -1,4 +1,4 @@
-import '../../../services/coin_services.dart';
+import '../../../services/services.dart';
 import '../coin.dart';
 
 class CoinRepository {

@@ -1,4 +1,4 @@
-import '../../../services/user_services.dart';
+import '../../../services/services.dart';
 import '../models/models.dart';
 
 class UserRepository {

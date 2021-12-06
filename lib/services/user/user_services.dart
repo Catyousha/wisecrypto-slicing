@@ -1,5 +1,5 @@
-import 'coin_services.dart' as coin_services;
-import '../repository/user/models/models.dart';
+import '../market/coin_services.dart' as coin_services;
+import '../../repository/user/models/models.dart';
 
 class UserServices {
   static Future<User> getUser() async {
