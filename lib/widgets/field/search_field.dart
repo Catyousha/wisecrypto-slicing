@@ -2,12 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:wisecrypto_slicing/config/themes/themes.dart';
 
-class SearchField extends StatelessWidget {
-  const SearchField({Key? key}) : super(key: key);
+class SearchField extends StatefulWidget {
+  const SearchField({
+    Key? key,
+    required this.callback,
+  }) : super(key: key);
+
+  final Function callback;
+
+  @override
+  State<SearchField> createState() => _SearchFieldState();
+}
+
+class _SearchFieldState extends State<SearchField> {
+  final controller = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    controller.addListener(() {
+      widget.callback(controller.text);
+    });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
+      //onChanged: (value) => widget.callback,
       style: AppText.textNormal.copyWith(color: AppColor.gray),
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.symmetric(

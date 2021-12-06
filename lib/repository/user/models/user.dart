@@ -27,6 +27,15 @@ class User {
     return result?.truncateToDouble() ?? 0;
   }
 
+  List<Coin>? searchCoins(String name) {
+    return favorite
+        ?.where(
+          (coin) => ((coin.name!.toLowerCase().contains(name) ||
+              coin.symbol!.toLowerCase().contains(name))),
+        )
+        .toList();
+  }
+
   //copywith
   User copyWith({
     int? id,

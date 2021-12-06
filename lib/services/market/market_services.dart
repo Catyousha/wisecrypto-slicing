@@ -9,7 +9,6 @@ class MarketServices {
         const Duration(seconds: 1),
         () => dummyMarket,
       );
-      print("PPPPPP");
       return response;
 
     } catch (e) {

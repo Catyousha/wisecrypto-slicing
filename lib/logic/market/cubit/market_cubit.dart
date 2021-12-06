@@ -36,4 +36,15 @@ class MarketCubit extends Cubit<MarketState> {
       status: MarketStatus.loaded,
     ));
   }
+
+  void searchCoins(String query) async {
+    emit(state.copyWith(
+      status: MarketStatus.loading,
+    ));
+    if (state.market == Market.empty) await fetchMarket();
+    emit(state.copyWith(
+      searchedValue: query,
+      status: MarketStatus.loaded,
+    ));
+  }
 }

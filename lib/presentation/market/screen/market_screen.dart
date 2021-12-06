@@ -16,6 +16,8 @@ class MarketScreen extends StatelessWidget {
               SearchSection(),
               SizedBox(height: 16),
               MarketCategorySection(),
+              SizedBox(height: 16),
+              CoinMarketListSection(),
             ],
           ),
         ),

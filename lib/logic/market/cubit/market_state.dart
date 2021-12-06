@@ -13,10 +13,12 @@ class MarketState extends Equatable {
   final MarketStatus status;
   final Market market;
   final int selectedCategoryId;
+  final String searchQuery;
 
   MarketState({
     this.status = MarketStatus.initial,
     this.selectedCategoryId = -1,
+    this.searchQuery = '',
     Market? market,
   }) : market = market ?? Market.empty;
 
@@ -24,19 +26,35 @@ class MarketState extends Equatable {
     return market.categories?[selectedCategoryId - 1].coins;
   }
 
-  //copywith
+  List<Coin>? get filteredCoins {
+    if (searchQuery == '') return categoryCoins;
+    return market.categories?[selectedCategoryId - 1].coins
+        ?.where(
+          (element) => ((element.name!.toLowerCase().contains(searchQuery)) ||
+              (element.symbol!.toLowerCase().contains(searchQuery))),
+        )
+        .toList();
+  }
+
   MarketState copyWith({
     MarketStatus? status,
     Market? market,
     int? selectedCategoryId,
+    String? searchedValue,
   }) {
     return MarketState(
       status: status ?? this.status,
       market: market ?? this.market,
       selectedCategoryId: selectedCategoryId ?? this.selectedCategoryId,
+      searchQuery: searchedValue ?? this.searchQuery,
     );
   }
 
   @override
-  List<Object> get props => [status, market, selectedCategoryId];
+  List<Object> get props => [
+        status,
+        market,
+        selectedCategoryId,
+        searchQuery,
+      ];
 }
