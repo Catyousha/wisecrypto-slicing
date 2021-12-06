@@ -6,11 +6,11 @@ part 'market_state.dart';
 
 // make cubit
 class MarketCubit extends Cubit<MarketState> {
-  MarketCubit() : super(MarketState());
+  MarketCubit(this._marketRepository) : super(MarketState());
 
-  final MarketRepository _marketRepository = MarketRepository();
+  final MarketRepository _marketRepository;
 
-  Future<void> getMarket() async {
+  Future<void> fetchMarket() async {
     try {
       emit(state.copyWith(
         status: MarketStatus.loading,

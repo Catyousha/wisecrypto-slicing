@@ -27,7 +27,10 @@ class WisecryptoApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (_) => UserCubit(UserRepository())..fetchUser(),
-        )
+        ),
+        BlocProvider(
+          create: (_) => MarketCubit(MarketRepository())..fetchMarket(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
