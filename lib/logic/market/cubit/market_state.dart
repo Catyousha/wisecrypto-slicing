@@ -12,22 +12,31 @@ extension MarketStatusExt on MarketStatus {
 class MarketState extends Equatable {
   final MarketStatus status;
   final Market market;
+  final int selectedCategoryId;
 
   MarketState({
     this.status = MarketStatus.initial,
+    this.selectedCategoryId = -1,
     Market? market,
-  }) : market = Market.empty;
+  }) : market = market ?? Market.empty;
 
+  List<Coin>? get categoryCoins {
+    return market.categories?[selectedCategoryId - 1].coins;
+  }
+
+  //copywith
   MarketState copyWith({
     MarketStatus? status,
     Market? market,
+    int? selectedCategoryId,
   }) {
     return MarketState(
       status: status ?? this.status,
       market: market ?? this.market,
+      selectedCategoryId: selectedCategoryId ?? this.selectedCategoryId,
     );
   }
 
   @override
-  List<Object> get props => [status, market];
+  List<Object> get props => [status, market, selectedCategoryId];
 }

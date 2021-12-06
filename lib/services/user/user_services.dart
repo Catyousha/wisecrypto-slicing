@@ -36,4 +36,12 @@ User dummyUser = User(
     coin_services.dummyCoins[3],
     coin_services.dummyCoins[5],
   ],
+  favorite: [
+    coin_services.dummyCoins[0],
+    coin_services.dummyCoins[1],
+    coin_services.dummyCoins[2],
+    coin_services.dummyCoins[3],
+    coin_services.dummyCoins[4],
+    coin_services.dummyCoins[5],
+  ],
 );

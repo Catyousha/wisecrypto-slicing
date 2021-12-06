@@ -7,7 +7,6 @@ import 'logic/logic.dart';
 import 'repository/repository.dart';
 
 void main() {
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: AppColor.white,

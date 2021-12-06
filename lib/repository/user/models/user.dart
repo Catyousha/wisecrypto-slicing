@@ -3,6 +3,7 @@ import 'user_portfolio.dart';
 
 class User {
   int? id;
+  List<Coin>? favorite;
   String? fullName;
   String? profileImageSrc;
   List<UserPortfolio>? portfolios;
@@ -10,6 +11,7 @@ class User {
 
   User({
     this.id,
+    this.favorite,
     this.fullName,
     this.profileImageSrc,
     this.portfolios,
@@ -25,9 +27,10 @@ class User {
     return result?.truncateToDouble() ?? 0;
   }
 
-
+  //copywith
   User copyWith({
     int? id,
+    List<Coin>? favorite,
     String? fullName,
     String? profileImageSrc,
     List<UserPortfolio>? portfolios,
@@ -35,6 +38,7 @@ class User {
   }) {
     return User(
       id: id ?? this.id,
+      favorite: favorite ?? this.favorite,
       fullName: fullName ?? this.fullName,
       profileImageSrc: profileImageSrc ?? this.profileImageSrc,
       portfolios: portfolios ?? this.portfolios,

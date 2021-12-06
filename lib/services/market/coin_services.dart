@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import '../../repository/market/market.dart';
-import 'market_services.dart' as mcs;
 
 class CoinServices {
   static Future<List<Coin>> getCoins() async {
@@ -25,10 +24,6 @@ final List<Coin> dummyCoins = [
     currentPrice: 54382.64,
     priceChange: 15.3,
     imageSrc: 'assets/bitmap/coin/coin_btc.png',
-    categories: <MarketCategory>[
-      mcs.dummyMarketCategories[0],
-      mcs.dummyMarketCategories[4],
-    ],
   ),
   Coin(
     id: 2,
@@ -37,10 +32,6 @@ final List<Coin> dummyCoins = [
     currentPrice: 4145.61,
     priceChange: -2.1,
     imageSrc: 'assets/bitmap/coin/coin_eth.png',
-    categories: <MarketCategory>[
-      mcs.dummyMarketCategories[0],
-      mcs.dummyMarketCategories[2],
-    ],
   ),
   Coin(
     id: 3,
@@ -49,10 +40,6 @@ final List<Coin> dummyCoins = [
     currentPrice: 207.3,
     priceChange: -1.1,
     imageSrc: 'assets/bitmap/coin/coin_ltc.png',
-    categories: <MarketCategory>[
-      mcs.dummyMarketCategories[0],
-      mcs.dummyMarketCategories[5],
-    ],
   ),
   Coin(
     id: 4,
@@ -61,10 +48,6 @@ final List<Coin> dummyCoins = [
     currentPrice: 227.93,
     priceChange: 15.3,
     imageSrc: 'assets/bitmap/coin/coin_sol.png',
-    categories: <MarketCategory>[
-      mcs.dummyMarketCategories[0],
-      mcs.dummyMarketCategories[1],
-    ],
   ),
   Coin(
     id: 5,
@@ -73,10 +56,6 @@ final List<Coin> dummyCoins = [
     currentPrice: 610.5,
     priceChange: -2.35,
     imageSrc: 'assets/bitmap/coin/coin_bnb.png',
-    categories: <MarketCategory>[
-      mcs.dummyMarketCategories[0],
-      mcs.dummyMarketCategories[3],
-    ],
   ),
   Coin(
     id: 6,
@@ -85,8 +64,5 @@ final List<Coin> dummyCoins = [
     currentPrice: 1.0358,
     priceChange: 15.3,
     imageSrc: 'assets/bitmap/coin/coin_xrp.png',
-    categories: <MarketCategory>[
-      mcs.dummyMarketCategories[0],
-    ],
   ),
 ];

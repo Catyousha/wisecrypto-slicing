@@ -4,7 +4,6 @@ import '../../../repository/repository.dart';
 
 part 'market_state.dart';
 
-// make cubit
 class MarketCubit extends Cubit<MarketState> {
   MarketCubit(this._marketRepository) : super(MarketState());
 
@@ -25,5 +24,16 @@ class MarketCubit extends Cubit<MarketState> {
         status: MarketStatus.failure,
       ));
     }
+  }
+
+  void selectMarketCategory(int id) async {
+    emit(state.copyWith(
+      status: MarketStatus.loading,
+    ));
+    if (state.market == Market.empty) await fetchMarket();
+    emit(state.copyWith(
+      selectedCategoryId: id,
+      status: MarketStatus.loaded,
+    ));
   }
 }

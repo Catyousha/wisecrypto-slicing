@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:wisecrypto_slicing/presentation/market/section/section.dart';
 import '../../../widgets/widgets.dart';
+import '../section/section.dart';
 
 class MarketScreen extends StatelessWidget {
-  const MarketScreen({ Key? key }) : super(key: key);
+  const MarketScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +14,8 @@ class MarketScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const <Widget>[
               SearchSection(),
+              SizedBox(height: 16),
+              MarketCategorySection(),
             ],
           ),
         ),
