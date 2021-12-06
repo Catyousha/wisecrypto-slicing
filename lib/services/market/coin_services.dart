@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import '../../repository/coin/coin.dart';
+import '../../repository/market/market.dart';
 
 class CoinServices {
   static Future<List<Coin>> getCoins() async {

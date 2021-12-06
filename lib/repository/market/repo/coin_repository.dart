@@ -1,5 +1,5 @@
 import '../../../services/services.dart';
-import '../coin.dart';
+import '../market.dart';
 
 class CoinRepository {
   Future<List<Coin>> getAllCoins() async {

@@ -1,4 +1,4 @@
-import '../../coin/coin.dart';
+import '../../market/market.dart';
 import 'user_portfolio.dart';
 
 class User {
