@@ -24,12 +24,12 @@ class UserCubit extends Cubit<UserState> {
     }
   }
 
-  Future<void> searchFavCoins(String querry) async {
+  Future<void> searchFavCoins(String query) async {
     emit(state.copyWith(status: UserStatus.loading));
     try {
       emit(state.copyWith(
         status: UserStatus.loaded,
-        searchedFavCoins: querry,
+        searchedFavCoins: query,
       ));
     } on Exception {
       emit(state.copyWith(status: UserStatus.failure));
