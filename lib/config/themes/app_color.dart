@@ -17,4 +17,7 @@ class AppColor {
   static const white = Color(0xFFFFFFFF);
 
   static const aquaSpring = Color(0xFFE9FCE9);
+  static const greenBubbles = Color(0xFFE0FFF0);
+  static const yellowChilean = Color(0xFFFFFCE0);
+  static const redMisty = Color(0xFFFFE0E0);
 }

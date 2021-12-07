@@ -44,4 +44,41 @@ User dummyUser = User(
     coin_services.dummyCoins[4],
     coin_services.dummyCoins[5],
   ],
+  notifications: [
+    UserNotification(
+      id: 1,
+      title: 'Portofolio Meningkat',
+      message: 'Kenaikan aset Bitcoin sebesar 1.1%',
+      type: NotificationType.portfolioGained,
+      createdAt: DateTime(2021, 11, 29, 13),
+    ),
+    UserNotification(
+      id: 2,
+      title: 'Transaksi Berhasil',
+      message: 'Pembelian bitcoin senilai 0,00001 berhasil dilakukan',
+      type: NotificationType.transactionSuccess,
+      createdAt: DateTime(2021, 11, 29, 13),
+    ),
+    UserNotification(
+      id: 3,
+      title: 'Transaksi Diproses',
+      message: 'Pengisian saldo senilai \$10 menunggu pembayaran',
+      type: NotificationType.transactionDelay,
+      createdAt: DateTime(2021, 11, 29, 13),
+    ),
+    UserNotification(
+      id: 4,
+      title: 'Pembayaran Berhasil',
+      message: 'Pengisian saldo senilai \$10 berhasil dilakukan',
+      type: NotificationType.transactionSuccess,
+      createdAt: DateTime(2021, 11, 29, 13),
+    ),
+    UserNotification(
+      id: 5,
+      title: 'Transaksi Gagal',
+      message: 'Pengisian saldo senilai \$10 gagal ',
+      type: NotificationType.transactionFailed,
+      createdAt: DateTime(2021, 11, 29, 13),
+    ),
+  ],
 );

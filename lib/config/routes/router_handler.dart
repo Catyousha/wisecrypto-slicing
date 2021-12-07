@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import '../../presentation/presentation_page.dart';
-import 'route_name.dart' as route_name;
+import 'route_name.dart';
 
 Widget dummyPage = const Scaffold(
   body: Center(),
 );
 
-Route<dynamic> controller(RouteSettings settings) {
+Route<dynamic> routeController(RouteSettings settings) {
   switch (settings.name) {
-    case route_name.root:
+    case Routes.root:
       return MaterialPageRoute(builder: (_) => const RootScreen());
-    case route_name.home:
+    case Routes.home:
       return MaterialPageRoute(builder: (_) => const HomeScreen());
-    case route_name.notification:
+    case Routes.notification:
+      return MaterialPageRoute(builder: (_) => const NotificationScreen());
+    case Routes.profile:
       return MaterialPageRoute(builder: (_) => dummyPage);
-    case route_name.profile:
-      return MaterialPageRoute(builder: (_) => dummyPage);
-    case route_name.market:
+    case Routes.market:
       return MaterialPageRoute(builder: (_) => const MarketScreen());
     default:
       return MaterialPageRoute(builder: (_) => dummyPage);

@@ -1,7 +1,9 @@
-const initialRoute = root;
+class Routes {
+  static const initialRoute = root;
 
-const root = '/';
-const home = '/home';
-const notification = '/notification';
-const market = '/market';
-const profile = '/profile';
+  static const root = '/';
+  static const home = '/home';
+  static const notification = '/notification';
+  static const market = '/market';
+  static const profile = '/profile';
+}

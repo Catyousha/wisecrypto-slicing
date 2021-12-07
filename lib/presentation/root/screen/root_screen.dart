@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iconly/iconly.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
+import '../../../config/routes/routes.dart';
 import '../../../config/themes/themes.dart';
 
 import '../../presentation_page.dart';
@@ -23,6 +23,9 @@ class RootScreen extends StatelessWidget {
         title: 'Home',
         activeColorPrimary: AppColor.primary,
         inactiveColorPrimary: Colors.grey,
+        routeAndNavigatorSettings: const RouteAndNavigatorSettings(
+          onGenerateRoute: routeController,
+        ),
       ),
       PersistentBottomNavBarItem(
         icon: const Icon(IconlyBold.bag),
@@ -30,6 +33,9 @@ class RootScreen extends StatelessWidget {
         title: 'Market',
         activeColorPrimary: AppColor.primary,
         inactiveColorPrimary: Colors.grey,
+        routeAndNavigatorSettings: const RouteAndNavigatorSettings(
+          onGenerateRoute: routeController,
+        ),
       ),
       PersistentBottomNavBarItem(
         icon: const Icon(IconlyBold.profile),
@@ -37,6 +43,9 @@ class RootScreen extends StatelessWidget {
         title: 'Profile',
         activeColorPrimary: AppColor.primary,
         inactiveColorPrimary: Colors.grey,
+        routeAndNavigatorSettings: const RouteAndNavigatorSettings(
+          onGenerateRoute: routeController,
+        ),
       ),
     ];
   }

@@ -1,5 +1,5 @@
 import '../../market/market.dart';
-import 'user_portfolio.dart';
+import 'models.dart';
 
 class User {
   int? id;
@@ -7,14 +7,17 @@ class User {
   String? fullName;
   String? profileImageSrc;
   List<UserPortfolio>? portfolios;
+  List<UserNotification>? notifications;
   List<Coin>? watchlist;
 
+  //constructor
   User({
     this.id,
     this.favorite,
     this.fullName,
     this.profileImageSrc,
     this.portfolios,
+    this.notifications,
     this.watchlist,
   });
 
@@ -43,6 +46,7 @@ class User {
     String? fullName,
     String? profileImageSrc,
     List<UserPortfolio>? portfolios,
+    List<UserNotification>? notifications,
     List<Coin>? watchlist,
   }) {
     return User(
@@ -51,6 +55,7 @@ class User {
       fullName: fullName ?? this.fullName,
       profileImageSrc: profileImageSrc ?? this.profileImageSrc,
       portfolios: portfolios ?? this.portfolios,
+      notifications: notifications ?? this.notifications,
       watchlist: watchlist ?? this.watchlist,
     );
   }

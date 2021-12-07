@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconly/iconly.dart';
+import 'package:wisecrypto_slicing/config/routes/routes.dart';
 import '../../../logic/logic.dart';
 import '../../../config/themes/themes.dart';
 import '../../../constants/constants.dart';
@@ -46,7 +47,9 @@ class NameHeaderSection extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.notification);
+            },
             icon: const Icon(
               IconlyLight.notification,
               size: 20,

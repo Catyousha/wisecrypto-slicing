@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'config/routes/routes.dart' as router;
+import 'package:intl/date_symbol_data_local.dart';
+import 'config/routes/routes.dart';
 import 'config/themes/themes.dart';
 import 'logic/logic.dart';
 import 'repository/repository.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: AppColor.white,
@@ -14,6 +16,7 @@ void main() {
       statusBarIconBrightness: Brightness.dark,
     ),
   );
+  initializeDateFormatting('id');
   runApp(const WisecryptoApp());
 }
 
@@ -41,8 +44,8 @@ class WisecryptoApp extends StatelessWidget {
                 displayColor: AppText.defaultTextColor,
               ),
         ),
-        onGenerateRoute: router.controller,
-        initialRoute: router.initialRoute,
+        onGenerateRoute: routeController,
+        initialRoute: Routes.initialRoute,
       ),
     );
   }
