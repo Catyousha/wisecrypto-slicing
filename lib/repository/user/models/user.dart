@@ -6,6 +6,7 @@ class User {
   List<Coin>? favorite;
   String? fullName;
   String? profileImageSrc;
+  double? balance;
   List<UserPortfolio>? portfolios;
   List<UserNotification>? notifications;
   List<Coin>? watchlist;
@@ -16,6 +17,7 @@ class User {
     this.favorite,
     this.fullName,
     this.profileImageSrc,
+    this.balance,
     this.portfolios,
     this.notifications,
     this.watchlist,
@@ -39,12 +41,18 @@ class User {
         .toList();
   }
 
+  /// --------DUMMY DATA--------
+  double get balanceToDollar {
+    return 25000;
+  }
+
   //copywith
   User copyWith({
     int? id,
     List<Coin>? favorite,
     String? fullName,
     String? profileImageSrc,
+    double? balance,
     List<UserPortfolio>? portfolios,
     List<UserNotification>? notifications,
     List<Coin>? watchlist,
@@ -54,6 +62,7 @@ class User {
       favorite: favorite ?? this.favorite,
       fullName: fullName ?? this.fullName,
       profileImageSrc: profileImageSrc ?? this.profileImageSrc,
+      balance: balance ?? this.balance,
       portfolios: portfolios ?? this.portfolios,
       notifications: notifications ?? this.notifications,
       watchlist: watchlist ?? this.watchlist,

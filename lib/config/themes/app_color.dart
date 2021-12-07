@@ -16,8 +16,13 @@ class AppColor {
   static const gray2 = Color(0xFFBEBEBE);
   static const white = Color(0xFFFFFFFF);
 
+  static const turquoise = Color(0xFF33CBD5);
+  static const orchid = Color(0xFFBD66F2);
+
   static const aquaSpring = Color(0xFFE9FCE9);
   static const greenBubbles = Color(0xFFE0FFF0);
   static const yellowChilean = Color(0xFFFFFCE0);
   static const redMisty = Color(0xFFFFE0E0);
+  static const cyan = Color(0xFFE0FDFF);
+  static const magnolia = Color(0xFFF1E0FF);
 }

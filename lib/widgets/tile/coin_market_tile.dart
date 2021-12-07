@@ -59,7 +59,7 @@ class CoinMarketTile extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Text(AppUtils.formatCurrency.format(coinPrice),
+              Text(AppUtils.formatCurrencyEN.format(coinPrice),
                   style: AppText.textMedium.copyWith(
                     fontWeight: AppText.bold,
                   )),

@@ -18,6 +18,7 @@ class UserServices {
 User dummyUser = User(
   id: 1,
   fullName: 'Nadila Aulia',
+  balance: 360242500,
   profileImageSrc: 'assets/bitmap/user/profile_picture.png',
   portfolios: [
     UserPortfolio(

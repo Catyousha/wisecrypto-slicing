@@ -15,7 +15,7 @@ Route<dynamic> routeController(RouteSettings settings) {
     case Routes.notification:
       return MaterialPageRoute(builder: (_) => const NotificationScreen());
     case Routes.profile:
-      return MaterialPageRoute(builder: (_) => dummyPage);
+      return MaterialPageRoute(builder: (_) => const ProfileScreen());
     case Routes.market:
       return MaterialPageRoute(builder: (_) => const MarketScreen());
     default:
